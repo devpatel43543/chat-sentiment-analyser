@@ -1,5 +1,5 @@
 import datetime
-from turtle import write_docstringdict
+#from turtle import write_docstringdict
 import streamlit as st
 import preprocesser,helper
 import matplotlib.pyplot as plt
@@ -7,15 +7,8 @@ import seaborn as sns
 
 st.sidebar.title("chat sentiment analyser")
 
-uploaded_file = st.sidebar.file_uploader("Choose a file")
-# starting_date = st.sidebar.date_input(
-#     "Start Date",
-#     datetime.date(2019,2,20))
+uploaded_file = st.sidebar.file_uploader("Choose a file")   
 
-# ending_date = st.sidebar.date_input(
-#     "end date",
-#     datetime.date(2019,4,4)
-# )
     
 if uploaded_file is not None:
     bytes_data = uploaded_file.getvalue()
