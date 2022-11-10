@@ -129,7 +129,7 @@ def find_negative(df):
 
 def create_wordcloud(selected_user,df):
 
-    f = open('stopwords.txt', 'r')
+    f = open('C:\\Users\\91982\\OneDrive\\Desktop\\sentiment_chat\\analyser\\stopwords.txt', 'r')
     stop_words = f.read()
 
     if selected_user != 'Overall':
