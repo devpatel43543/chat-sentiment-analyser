@@ -1,5 +1,5 @@
 from collections import Counter
-
+import os
 import numpy as np
 import pandas as pd
 from textblob import TextBlob
@@ -128,9 +128,11 @@ def find_negative(df):
 
 
 def create_wordcloud(selected_user,df):
-
-    f = open(".\\analyser\\stopword.txt", 'r')
-    stop_words = f.read()
+    f = os.open("stopword.txt",os.O_RDONLY)
+    hi = os.read(f,7063)
+    stop_words=hi.decode("UTF-8")
+    # f = open("stopword.txt", 'r')
+    # stop_words = f.read()
 
     if selected_user != 'Overall':
         df = df[df['user'] == selected_user]
@@ -152,9 +154,9 @@ def create_wordcloud(selected_user,df):
 
 def most_common_words(selected_user,df):
 
-    f = open(".\\analyser\\stopword.txt",'r')
-    stop_words = f.read()
-
+    f = os.open("stopword.txt",os.O_RDONLY)
+    hi = os.read(f,7063)
+    stop_words=hi.decode("UTF-8")
     if selected_user != 'Overall':
         df = df[df['user'] == selected_user]
 
