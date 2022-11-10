@@ -1,10 +1,10 @@
-from urlextract import URLExtract
-from wordcloud import WordCloud
-import pandas as pd
 from collections import Counter
 
 import numpy as np
+import pandas as pd
 from textblob import TextBlob
+from urlextract import URLExtract
+from wordcloud import WordCloud
 
 extract = URLExtract()
 
@@ -129,7 +129,7 @@ def find_negative(df):
 
 def create_wordcloud(selected_user,df):
 
-    f = open('C:\\Users\\91982\\OneDrive\\Desktop\\sentiment_chat\\analyser\\stopwords.txt', 'r')
+    f = open('C:\\Users\\91982\\OneDrive\\Desktop\\sentiment_chat\\analyser\\stopword.txt', 'r')
     stop_words = f.read()
 
     if selected_user != 'Overall':
@@ -152,7 +152,7 @@ def create_wordcloud(selected_user,df):
 
 def most_common_words(selected_user,df):
 
-    f = open('stopwords.txt','r')
+    f = open('stopword.txt','r')
     stop_words = f.read()
 
     if selected_user != 'Overall':
