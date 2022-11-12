@@ -128,9 +128,12 @@ def find_negative(df):
 
 
 def create_wordcloud(selected_user,df):
-    f = os.open("stopword.txt",os.O_RDONLY)
-    hi = os.read(f,7063)
-    stop_words=hi.decode("UTF-8")
+
+   
+
+    script_dir = os.path.dirname(__file__) #<-- absolute dir the script is in
+    rel_path = "analyser\stopword.txt"
+    stop_words = os.path.join(script_dir, rel_path)
     # f = open("stopword.txt", 'r')
     # stop_words = f.read()
 
@@ -153,10 +156,13 @@ def create_wordcloud(selected_user,df):
     return df_wc
 
 def most_common_words(selected_user,df):
+    script_dir = os.path.dirname(__file__) #<-- absolute dir the script is in
+    rel_path = "analyser\stopword.txt"
+    stop_words = os.path.join(script_dir, rel_path)
 
-    f = os.open("stopword.txt",os.O_RDONLY)
-    hi = os.read(f,7063)
-    stop_words=hi.decode("UTF-8")
+    # f = os.open("stopword.txt",os.O_RDONLY)
+    # hi = os.read(f,7063)
+    # stop_words=hi.decode("UTF-8")
     if selected_user != 'Overall':
         df = df[df['user'] == selected_user]
 

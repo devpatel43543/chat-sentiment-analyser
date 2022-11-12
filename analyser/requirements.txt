@@ -6,3 +6,4 @@ streamlit
 textblob
 urlextract
 wordcloud
+os
