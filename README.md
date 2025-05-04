@@ -14,9 +14,6 @@ In large-scale group communications whether in social, professional, or investig
 **Chat Sentiment Analyser** solves this by transforming raw chat exports into actionable insights through sentiment analysis, keyword frequency, and interactive visualizations.
 
 ---
-## 🌐 Hosted website
-[🔗 Live Demo](https://devpatel43543-chat-sentiment-analyser-analysermyapp-bvwlui.streamlit.app/)
----
 ## Key Features
 
 - **📂 Chat File Upload**: Supports plain text exports (e.g., WhatsApp, Telegram).
